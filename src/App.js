@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ProfileComponent from './Profile/ProfileComponent';
+
+
 
 function App() {
+  const data= { fullName :'Nice Person', bio:'Cool life',profession:'Teacher' }
+  let handleName=(x)=>{alert(` the name is ${x}`)}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <ProfileComponent data={data} handleName={handleName}>
+      
+     <img src='https://img.freepik.com/free-vector/teacher-standing-near-blackboard-holding-stick-isolated-flat-vector-illustration-cartoon-woman-character-near-chalkboard-pointing-alphabet_74855-8600.jpg?w=2000' height={500} width={400}
+          alt='teacherphoto' ></img>
+
+      </ProfileComponent>
+
+
     </div>
   );
 }
